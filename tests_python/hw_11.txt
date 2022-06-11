@@ -1,0 +1,13 @@
+url : https://makeup.com.ua/ua/
+
+//*[@id = 'search-toggle']
+//div[@data-default-name = 'Новинки']
+//div[@class='slider ajax-loadable-slider loaded']
+//span[@class ='footer-text global']
+//div[@id="menu-toggle"]
+//div[@class="simple-slider-list-wrap"]/ancestor::div[@class='slider ajax-loadable-slider loaded']
+//input[@name='fio']
+//li[@class='catalog-sort-list__item']
+//div[@class='slide']//child::picture[@title='Brandy Sale!_main']
+//div[@class='simple-slider']//parent::div[@class='simple-slider-list__link']/a[@href]/img[@id='option-preview-599089']
+//div[@class='cooperation']//a
