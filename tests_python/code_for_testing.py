@@ -55,3 +55,15 @@ class Human:
             return True
         else:
             raise Exception(f'{self.__name} is already dead')
+
+    @name.setter
+    def name(self, value):
+        self._name = value
+
+    @status.setter
+    def status(self, value):
+        self._status = value
+
+    @age.setter
+    def age(self, value):
+        self._age = value
