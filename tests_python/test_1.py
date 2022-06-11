@@ -7,7 +7,7 @@ from tests_python.code_for_testing import Human
 @pytest.mark.regression
 def test_parameters(create_new_human):
     """"
-    Descriptions: test check that Human name return name, age return age, gender return gender
+    Descriptions: test check that Human name return name, age return age, gender return gender.
     Steps:
     1. Create human_new1
     2. create human_new2 equal human_new1
