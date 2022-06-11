@@ -54,20 +54,3 @@ def create_new_friends():
         yield new_friend
     logger.info(msg='Fixture finished')
 
-
-
-# @pytest.fixture()
-# def growingg():
-# logger.info(msg='Fixture start')
-# yield Human(name='Ali', age=104, gender='female')
-# logger.info(msg='Fixture finished')
-
-
-
-
-
-#@pytest.fixture()
-#def human_name():
-    #logger.info(msg='Fixture start')
-    #yield Human(name='Ali', age=104, gender='female')
-    #logger.info(msg='Fixture finished')
