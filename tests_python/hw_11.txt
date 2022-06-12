@@ -1,32 +1,34 @@
 url : https://makeup.com.ua/ua/
 
-//*[@id = 'search-toggle']
+//*[@id = 'search-toggle']   #CSS:  #search-toggle
 //div[@data-default-name = 'Новинки']
-//div[@class='slider ajax-loadable-slider loaded']
+//div[@data-src='/ajax/block/slider/648/']
 //span[@class ='footer-text global']
-//div[@id="menu-toggle"]
+//div[@id="menu-toggle"]   #CSS:  nav>div[id="menu-toggle"]
 //div[@class="simple-slider-list-wrap"]/ancestor::div[@class='slider ajax-loadable-slider loaded']
-//input[@name='fio']
+//input[@name='fio']    #CSS:  input[name='fio']
 //li[@class='catalog-sort-list__item']
-//div[@class='slide']//child::picture[@title='Brandy Sale!_main']
+//div[@class='slide']//child::picture[@title='Brandy Sale!_main']   #CSS: [title='Brandy Sale!_main']
 //div[@class='simple-slider']//parent::div[@class='simple-slider-list__link']//span[text()='48']
 //div[@class='cooperation']//a
 //div//div/.
-//div[@class='slider-page__labels']//label[@for='id-slider-87efe461-f3dd-4341-a872-23dd2cbdd75e-2']
+//div[@class='slider-page__labels']//label[@for="id-slider-dbd9784f-ce86-410c-944f-6f3214173f97-0"]
+CSS:    div[class='slider-page__labels'] label[for="id-slider-dbd9784f-ce86-410c-944f-6f3214173f97-0"]
 //ul[@class="footer-social social"]//li[@class="social__item social yt"]
 //div[@class="input-row links"]//child::div/.
 //div[@class="form-wrap"]/attribute::class/.
 //form[@action="/ajax/auth/"]//descendant::input[@type='password']
 //span[text()='Безкоштовна доставка по Україні!']
 //div[@class="footer-phone"]/a[@href='tel:+380443740383']
-//div[@class="footer-column-header"]
+//div[@class="footer-column-header"]  #CSS: div[class^="footer-column-"]
 //div[@class="header-middle"]/following::*
-//div[@class = 'cooperation']/a/.
+//div[@class='cooperation']/a/.       #CSS:     div>div[class='cooperation']>a
 //div[@class="slider ajax-loadable-slider skip-showed loaded"]//child::div[@data-default-name="Парфюмерия"]
+CSS:  div[class="slider ajax-loadable-slider skip-showed loaded"] div[data-default-name="Парфюмерия"]
 //div[@class='simple-slider-list__image']//img[@src="https://u.makeup.com.ua/b/be/bet2wci9rn2r.jpg"]
-//div[@class='footer-color-text']
+//div[@class='footer-color-text']   #CSS: div[class$='text']
 //p/a
-//div[@class="work-time"]
 //nav[@class="menu"]//descendant::div[@id='menu-close']
-//div[@class="button-up"]
-//span[@class="simple-slider-list__price"]//span[text()='29']
+//div[@class="button-up"]    #CSS:  div>div[class$="up"]
+//div[@class="simple-slider-list__price_container"]//parent::span[text()='29']
+//div[@id='slider']//button[text()='Previous']
