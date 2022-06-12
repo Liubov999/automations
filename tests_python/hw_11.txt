@@ -9,5 +9,24 @@ url : https://makeup.com.ua/ua/
 //input[@name='fio']
 //li[@class='catalog-sort-list__item']
 //div[@class='slide']//child::picture[@title='Brandy Sale!_main']
-//div[@class='simple-slider']//parent::div[@class='simple-slider-list__link']/a[@href]/img[@id='option-preview-599089']
+//div[@class='simple-slider']//parent::div[@class='simple-slider-list__link']//span[text()='48']
 //div[@class='cooperation']//a
+//div//div/.
+//div[@class='slider-page__labels']//label[@for='id-slider-87efe461-f3dd-4341-a872-23dd2cbdd75e-2']
+//ul[@class="footer-social social"]//li[@class="social__item social yt"]
+//div[@class="input-row links"]//child::div/.
+//div[@class="form-wrap"]/attribute::class/.
+//form[@action="/ajax/auth/"]//descendant::input[@type='password']
+//span[text()='Безкоштовна доставка по Україні!']
+//div[@class="footer-phone"]/a[@href='tel:+380443740383']
+//div[@class="footer-column-header"]
+//div[@class="header-middle"]/following::*
+//div[@class = 'cooperation']/a/.
+//div[@class="slider ajax-loadable-slider skip-showed loaded"]//child::div[@data-default-name="Парфюмерия"]
+//div[@class='simple-slider-list__image']//img[@src="https://u.makeup.com.ua/b/be/bet2wci9rn2r.jpg"]
+//div[@class='footer-color-text']
+//p/a
+//div[@class="work-time"]
+//nav[@class="menu"]//descendant::div[@id='menu-close']
+//div[@class="button-up"]
+//span[@class="simple-slider-list__price"]//span[text()='29']
