@@ -7,6 +7,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
+
 os.environ['GH_TOKEN'] = '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'
 
 
