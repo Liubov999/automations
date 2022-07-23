@@ -1,0 +1,35 @@
+* Install postgresql or other SQL System
+ brew install postgresql
+
+* Change password for user postgres
+alter user postgres with password '123';
+
+* Create Data Base store
+create database mydb;
+
+* Create table products with columns (id, name, price)
+create table products (id int generated always as identity primary key, name varchar(20), price int);
+
+* Add 5 different values to products
+insert into products (name, price) values ('potato', 60), ('melon', 90), ('onion', 34),  ('apple', 23), ('cherry', 77);
+
+* Create table orders with columns (id, product_id, quantity)
+create table orders (id varchar primary key, product_id int, quantity int, constraint fk_product_id foreign key (product_id) references products(id));
+
+* Add 5 different values to orders according to your products
+insert into orders (id, product_id, quantity) values (345, 1, 35), (563, 2, 77), (884, 3, 55),  (467, 4, 90), (883, 5, 12);
+
+* Create select with result with such columns (name, price, quantity, total)
+alter table orders add column total int(20);
+SELECT p.price*o.quantity as Total from products as p inner join orders as o on p.id = o.product_id;
+update orders set total = 2100 where product_id = 1;
+update orders set total = 6930 where product_id =2;
+update orders set total = 1870 where product_id = 3;
+update orders set total = 2070 where product_id = 4;
+update orders set total = 924 where product_id = 5;
+select p.name,p.price,o.quantity, o.total from products as p inner join orders as o on p.id = o.product_id order by product_id;
+
+
+
+
+
