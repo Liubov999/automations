@@ -1,5 +1,4 @@
-from SQL.base_db import BaseDbConnection
-
+from SQL.SQL_HW.base_db import BaseDbConnection
 
 
 class OrdersRepository(BaseDbConnection):

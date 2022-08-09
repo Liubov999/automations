@@ -1,7 +1,6 @@
-from SQL.SQL_HW.product_repository import ProductRepository
-from SQL.orders_repository import OrdersRepository
 from SQL.SQL_HW.create_table import CreateTable
-
+from SQL.SQL_HW.orders_repository import OrdersRepository
+from SQL.SQL_HW.product_repository import ProductRepository
 
 product_repository = ProductRepository()
 create_table_orders = CreateTable()
