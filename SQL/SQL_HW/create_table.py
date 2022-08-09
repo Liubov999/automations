@@ -22,6 +22,7 @@ class CreateTable(BaseDbConnection):
                              f'20), price int);')
         self._connection.commit()
 
+
     def create_table_orders(self):
         self._cursor.execute(f'create table orders (id varchar primary key, product_id int, quantity int, constraint '
                              f'fk_product_id '

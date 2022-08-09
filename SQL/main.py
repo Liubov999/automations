@@ -33,6 +33,7 @@ orders_repository.update_total(1870, 3)
 orders_repository.update_total(2070, 4)
 orders_repository.update_total(924, 5)
 
+
 print(orders_repository.get_by_join())
 
 

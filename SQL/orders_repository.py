@@ -1,6 +1,7 @@
 from SQL.base_db import BaseDbConnection
 
 
+
 class OrdersRepository(BaseDbConnection):
     def __init__(self):
         super().__init__()

@@ -14,6 +14,7 @@ class BaseDbConnection:
         self._cursor = self._connection.cursor()
         self.table_name = 'orders'
 
+
     def get_all(self):
         self._cursor.execute(f'select * from {self.table_name};')
         return self._cursor.fetchall()

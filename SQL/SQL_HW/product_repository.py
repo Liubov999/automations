@@ -15,6 +15,7 @@ class ProductRepository(BaseDbConnection):
                              f'o.product_id;')
         return self._cursor.fetchall()
 
+
     def __del__(self):
         if self._connection:
             self._cursor.close()
