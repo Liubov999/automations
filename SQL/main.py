@@ -1,7 +1,7 @@
-
+from SQL.SQL_HW.product_repository import ProductRepository
 from SQL.orders_repository import OrdersRepository
-from SQL.sql_alchemy.create_table import CreateTable
-from SQL.product_repository import ProductRepository
+from SQL.SQL_HW.create_table import CreateTable
+
 
 product_repository = ProductRepository()
 create_table_orders = CreateTable()
@@ -25,6 +25,7 @@ orders_repository.insert_many_orders(467, 4, 90)
 orders_repository.insert_many_orders(883, 5, 12)
 
 orders_repository.add_column()
+product_repository.select_total()
 
 orders_repository.update_total(2100, 1)
 orders_repository.update_total(6930, 2)
