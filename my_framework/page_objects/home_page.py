@@ -1,5 +1,6 @@
 from selenium.webdriver.support import expected_conditions as EC
 import pytest
+import allure
 
 from my_framework.page_objects.delivery_page import DeliveryPage
 from my_framework.page_objects.login_modal import LoginModal
@@ -28,42 +29,53 @@ class HomePage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
 
+    @allure.step
     def get_current_title(self):
         current_title = WebDriverWait(self._driver, 10).until(EC.title_is(self.__current_title))
         return current_title
 
+    @allure.step
     def get_subscribe_field(self):
         subscribe_locator = self.wait_until_element_located(self.__input_subscribe_locator)
         return subscribe_locator
 
+    @allure.step
     def set_user_email(self, email):
         self.send_keys(self.__input_subscribe_locator, email)
 
+    @allure.step
     def click_subscribe(self):
         self.click(self.__subscribe_button)
 
+    @allure.step
     def subscribe_popup(self):
         pop_up = self.wait_until_element_located(self.__pop_up_window)
         return pop_up
 
+    @allure.step
     def click_sigh_in(self):
         self.click(self.__sign_in_button)
         return LoginModal(self._driver)
 
+    @allure.step
     def click_delivery(self):
         self.click(self.__delivery_button)
         return DeliveryPage(self._driver)
 
+    @allure.step
     def click_ru(self):
         self.click(self.__lang_ru)
 
+    @allure.step
     def get_title_ru(self):
         title_ru = WebDriverWait(self._driver, 10).until(EC.title_is(self.__title_ru))
         return title_ru
 
+    @allure.step
     def click_call_back(self):
         self.click(self.__call_back)
 
+    @allure.step
     def get_call_back_modal(self):
         call_back_modal = self.wait_until_element_located(self.__call_back_modal)
         return call_back_modal

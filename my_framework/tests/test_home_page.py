@@ -1,12 +1,16 @@
 from selenium.common import TimeoutException
+import pytest
+import allure
 
 
+@allure.feature('Liubov Iarova')
 def test_title(get_home_page):
     home_page = get_home_page
     current_title = get_home_page.get_current_title()
     assert current_title == get_home_page.get_current_title(), f'\nActual:{current_title}\nExpected:{get_home_page.get_current_title()} '
 
 
+@allure.feature('Liubov Iarova')
 def test_get_subscribe_element(get_home_page):
     home_page = get_home_page
     subscribe_element = get_home_page.get_subscribe_field
@@ -14,6 +18,8 @@ def test_get_subscribe_element(get_home_page):
         f'\nUnable to find element\nActual:{subscribe_element}\nExpected:{get_home_page.get_subscribe_field}'
 
 
+@allure.feature('Storie_1')
+@allure.feature('Liubov Iarova')
 def test_subscribe(get_home_page):
     home_page = get_home_page
     email = 'test@test.com'
@@ -24,6 +30,7 @@ def test_subscribe(get_home_page):
         f'\nPop Up is missing\nActual:{pop_up}\nExpected:{get_home_page.subscribe_popup()}'
 
 
+@allure.feature('Liubov Iarova')
 def test_login(get_home_page):
     user_email = 'lubanya9999@gmail.com'
     user_password = 'kykyryky999'
@@ -36,6 +43,8 @@ def test_login(get_home_page):
     assert current_title == get_home_page.get_current_title(), f'\nActual:{current_title}\nExpected:{get_home_page.get_current_title()}'
 
 
+@allure.feature('Storie_1')
+@allure.feature('Liubov Iarova')
 def test_forget_password_modal(get_home_page):
     home_page = get_home_page
     login_modal_page = home_page.click_sigh_in()
@@ -46,6 +55,7 @@ def test_forget_password_modal(get_home_page):
         f'\nUnable to find element\nActual:{modal}\nExpected:{login_modal_page.get_forget_password_modal()}'
 
 
+@allure.feature('Liubov Iarova')
 def test_close_login_modal(get_home_page):
     home_page = get_home_page
     login_modal_page = home_page.click_sigh_in()
@@ -53,6 +63,8 @@ def test_close_login_modal(get_home_page):
     login_modal_page.click_close_login_button()
 
 
+@allure.feature('Storie_2')
+@allure.feature('Liubov Iarova')
 def test_close_forgot_password_modal(get_home_page):
     home_page = get_home_page
     login_modal_page = home_page.click_sigh_in()
@@ -63,6 +75,7 @@ def test_close_forgot_password_modal(get_home_page):
     login_modal_page.click_close_forget_button()
 
 
+@allure.feature('Liubov Iarova')
 def test_delivery(get_home_page):
     home_page = get_home_page
     delivery_page = home_page.click_delivery()
@@ -71,6 +84,13 @@ def test_delivery(get_home_page):
         f'\nUnable to find element\nActual:{header}\nExpected:{delivery_page.get_delivery_page_header()}'
 
 
+@pytest.mark.xfail(condition=lambda: True, reason='this test is expecting failure')
+def test_xfail_expected_failure():
+    """this test is an xfail that will be marked as expected failure"""
+    assert False
+
+
+@allure.feature('Liubov Iarova')
 def test_change_language(get_home_page):
     home_page = get_home_page
     get_home_page.click_ru()
@@ -78,6 +98,7 @@ def test_change_language(get_home_page):
     assert title_ru == get_home_page.get_title_ru(), f'\nActual:{title_ru}\nExpected:{get_home_page.get_title_ru()}'
 
 
+@allure.feature('Liubov Iarova')
 def test_call_back(get_home_page):
     home_page = get_home_page
     get_home_page.click_call_back()
